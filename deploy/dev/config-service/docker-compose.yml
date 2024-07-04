@@ -2,8 +2,8 @@ version: '3.5'
 
 services:
   app:
-    container_name: config-dev-latest
-    image: 192.168.121.20:5000/khl/config:config-dev-latest
+    container_name: config-latest
+    image: config-service:latest
     ports:
       - "5503:5503"
     restart: unless-stopped

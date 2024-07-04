@@ -1,7 +1,7 @@
 server:
   port: 5506
   servlet:
-    context-path: /notification-service
+    context-path: /notification
 
 spring:
   data:

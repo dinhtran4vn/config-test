@@ -41,7 +41,7 @@ spring:
       protocol: smtp
   data:
     mongodb:
-      host: localhost
+      host: 192.168.1.91
       port: 27017
       username: mongadmin
       password: LikeAndSubscribe
@@ -50,7 +50,7 @@ spring:
       database: 1
       port: 6379
       timeout: 30000
-      host: localhost
+      host: 192.168.1.91
       username: default
       password: eY897EwVmmxKPCDmwMtyKVge8oLd2t81
   session:
@@ -71,7 +71,7 @@ spring:
                     new_generator_mappings: false
 
 kafka:
-  bootstrapAddress: localhost:9092
+  bootstrapAddress: 192.168.1.91:9092
   listener:
     enabled: true
   producer:
@@ -106,14 +106,12 @@ kafka:
     cancel-schedule-send-mail-topic: khl_dev_cancel-schedule-send-mail-topic
     send-mail-topic: khl_dev_send-mail-topic
 
-sending-survey-email-url: "https://crm-dev.tma-swerp.com/survey-form?"
-
 eureka:
   instance:
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://discovery:5502/eureka
+      defaultZone: http://192.168.1.91:5502/eureka
     register-with-eureka: true
     fetch-registry: true
   

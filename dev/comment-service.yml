@@ -1,7 +1,7 @@
 server:
   port: 5507
   servlet:
-    context-path: /comment-service
+    context-path: /comment
 
 spring:
   data:

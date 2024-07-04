@@ -1,0 +1,11 @@
+version: '3.5'
+
+services:
+  app:
+    container_name: discovery-dev-latest
+    image: 192.168.121.20:5000/khl/discovery:discovery-dev-latest
+    ports:
+      - "5502:5502"
+    restart: unless-stopped
+    pull_policy: always
+

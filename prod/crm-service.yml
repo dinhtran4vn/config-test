@@ -1,0 +1,18 @@
+server:
+  port: ${PORT:8082}
+  servlet:
+    context-path: /crm-service
+
+spring:
+  datasource:
+    url: jdbc:postgresql://192.168.121.23:5432/erp_crm
+    username: postgres
+    password: 1_Abc_123@
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      pool-name: dev-crm-pool
+      maximum-pool-size: 50 #This means that HikariCP can maintain a maximum of 50 connections in the pool at any given time.
+      max-lifetime: 1800000 # a connection is allowed to live in the pool for a maximum of 30 minutes before it is closed and removed from the pool
+      idle-timeout: 300000 # after 5 minutes, if a connection is idle for longer than 5 minutes, it will be closed and removed from the pool
+      connection-timeout: 30000 #  if a connection is not available within 30 seconds, a SQLException will be thrown
+      minimum-idle: 3 # This means that HikariCP will maintain a minimum of 3 idle connections in the pool at all times

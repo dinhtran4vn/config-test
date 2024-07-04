@@ -1,0 +1,11 @@
+version: '3.5'
+
+services:
+  app:
+    container_name: storage-dev-latest
+    image: 192.168.121.20:5000/khl/storage:storage-dev-latest
+    ports:
+      - "5504:5504"
+    restart: unless-stopped
+    pull_policy: always
+

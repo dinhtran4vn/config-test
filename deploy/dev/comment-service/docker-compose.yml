@@ -1,0 +1,11 @@
+version: '3.5'
+
+services:
+  app:
+    container_name: comment-dev-latest
+    image: 192.168.121.20:5000/khl/comment:comment-dev-latest
+    ports:
+      - "5507:5507"
+    restart: unless-stopped
+    pull_policy: always
+

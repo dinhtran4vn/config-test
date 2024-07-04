@@ -1,0 +1,16 @@
+server:
+  port: 5502
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:${server.port}/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+    hostname: localhost
+    non-secure-port: ${server.port}
+    prefer-ip-address: true
+

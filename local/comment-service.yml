@@ -1,0 +1,24 @@
+server:
+  port: 5507
+  servlet:
+    context-path: /comment-service
+
+spring:
+  kafka:
+    producer:
+      #0: no wait for kafka response
+      #1: leader write success, not wait for follower
+      #-1: wait for all leader, and replication
+      acks: 1
+      retries: 1
+      properties:
+        [enable.idempotence]: true
+        [max.in.flight.requests.per.connection]: 5
+  data:
+    mongodb:
+      database: comment
+
+referent-link:
+  product: main/listCustomer/
+  customer: main/listProduct/
+  contract: main/listContract/

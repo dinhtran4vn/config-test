@@ -1,0 +1,159 @@
+server:
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css,application/javascript,application/json
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 200MB
+      max-request-size: 215MB
+  http2:
+    enabled: true
+
+spring:
+  package-version: 1.0.0
+  web:
+    resources:
+      static-locations: file:/home
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+    static-path-pattern: /**
+  main:
+    allow-bean-definition-overriding: true
+  mail:
+    host: smtp.gmail.com
+    username: tmasolutions25year@gmail.com
+    password: mztofcxsybzexgpq
+    port: 587
+    properties:
+      mail:
+        debug: true
+        smtp:
+          ssl:
+            trust: smtp.gmail.com
+          auth: true
+          starttls:
+            enable: true
+            required: true
+    transport:
+      protocol: smtp
+  data:
+    mongodb:
+      uri: mongodb://mongouser:1_Abc_123%40@192.168.121.22:27017/admin
+      host: 192.168.121.22
+      port: 27017
+      username: mongouser
+      password: 1_Abc_123@
+      authentication-database: admin
+    redis:
+      database: 1
+      port: 6379
+      timeout: 30000
+      host: 192.168.121.93
+      username: default
+      password: 12345678x@X
+  session:
+    store-type: redis
+    redis:
+      namespace: dev
+  cache:
+    type: redis
+    redis:
+      time-to-live: '45000'
+      cache-null-values: 'true'
+  jpa:
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                id:
+                    new_generator_mappings: false
+  kafka:
+    bootstrapAddress: 192.168.121.93:9092
+    bootstrap-servers: 192.168.121.93:9092
+    listener:
+      enabled: true
+    producer:
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.add.type.headers: false
+    groups:
+      create-sso-account: ${CREATE_SSO_ACCOUNT_ID:create-account-group-crm}
+      update-sso-account: ${UPDATE_SSO_ACCOUNT_ID:update-account-group-crm}
+      delete-sso-account: ${DELETE_SSO_ACCOUNT_ID:delete-account-group-crm}
+      sync-account-topic: sync-account-group-crm
+    topics:
+      create-account-topic: khl_dev_create-account-topic
+      update-account-topic: khl_dev_update-account-topic
+      delete-account-topic: khl_dev_delete-account-topic
+      sync-account-topic: khl_dev_sync-account-topic
+      create-customer-topic: khl_dev_create-customer-topic
+      create-product-topic: khl_dev_create-product-topic
+      create-contract-topic: khl_dev_create-contract-topic
+      update-customer-topic: khl_dev_update-customer-topic
+      update-product-topic: khl_dev_update-product-topic
+      update-contract-topic: khl_dev_update-contract-topic
+      delete-customer-topic: khl_dev_delete-customer-topic
+      delete-product-topic: khl_dev_delete-product-topic
+      delete-contract-topic: khl_dev_delete-contract-topic
+      send-customer-sms-for-marketing-topic: khl_dev_send-customer-sms-for-marketing-topic
+      cancel-send-customer-sms-for-marketing-topic: khl_dev_cancel-send-customer-sms-for-marketing-topic
+      send-customer-email-for-survey-topic: khl_dev_send-customer-email-for-survey-topic
+      send-user-email-for-survey-topic: khl_dev_send-user-email-for-survey-topic
+      send-guest-email-for-survey-topic: khl_dev_send-guest-email-for-survey-topic
+      schedule-send-mail-topic: khl_dev_schedule-send-mail-topic
+      cancel-schedule-send-mail-topic: khl_dev_cancel-schedule-send-mail-topic
+      send-mail-topic: khl_dev_send-mail-topic
+      create-webp-topic: khl_dev_topic_storage_create_webp_server
+      convert-video: khl_dev_topic_storage_convert_video_server
+
+sending-survey-email-url: "https://crm-dev.tma-swerp.com/survey-form?"
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://discovery:5502/eureka
+    register-with-eureka: true
+    fetch-registry: true
+  
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+
+logging:        
+  file:
+    name: application.log
+  level:
+    root: INFO
+    org.springframework: INFO
+
+referent-link:
+  product: main/listCustomer/
+  customer: main/listProduct/
+  contract: main/listContract/
+
+users:
+  sync:
+    schedule:
+      time: 0 0 2 * * ?
+      time-zone: Asia/Ho_Chi_Minh
+schedule:
+  email:
+    customer-care:
+      time : 0 0 0 * * ?
+      zone : Asia/Ho_Chi_Minh
+
+app:
+  client:
+    domain: http://dev-sso.tma-swerp.com
+  gateway:
+    domain-name: http://bdu-gateway-service.com
+
+jwt:
+  accessTokenExpired: 602
+  refreshTokenExpired: 720022424

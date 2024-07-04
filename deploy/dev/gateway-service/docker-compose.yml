@@ -1,0 +1,11 @@
+version: '3.5'
+
+services:
+  app:
+    container_name: gateway-dev-latest
+    image: 192.168.121.20:5000/khl/gateway:gateway-dev-latest
+    ports:
+      - "5501:5501"
+    restart: unless-stopped
+    pull_policy: always
+

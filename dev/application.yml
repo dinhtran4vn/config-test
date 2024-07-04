@@ -41,18 +41,18 @@ spring:
       protocol: smtp
   data:
     mongodb:
-      host: 192.168.121.22
+      host: localhost
       port: 27017
-      username: mongouser
-      password: 1_Abc_123@
+      username: mongadmin
+      password: LikeAndSubscribe
       authentication-database: admin
     redis:
       database: 1
       port: 6379
       timeout: 30000
-      host: 192.168.121.93
+      host: localhost
       username: default
-      password: 12345678x@X
+      password: eY897EwVmmxKPCDmwMtyKVge8oLd2t81
   session:
     store-type: redis
     redis:
@@ -71,7 +71,7 @@ spring:
                     new_generator_mappings: false
 
 kafka:
-  bootstrapAddress: 192.168.121.93:9092
+  bootstrapAddress: localhost:9092
   listener:
     enabled: true
   producer:

@@ -105,8 +105,6 @@ spring:
       schedule-send-mail-topic: khl_dev_schedule-send-mail-topic
       cancel-schedule-send-mail-topic: khl_dev_cancel-schedule-send-mail-topic
       send-mail-topic: khl_dev_send-mail-topic    
-      create-webp-topic: khl-dev-topic-storage-create-webp-server
-      convert-video: khl-dev-topic-storage-convert-video-server
 
 eureka:
   instance:
@@ -129,16 +127,6 @@ logging:
     root: INFO
     org.springframework: INFO
 
-video:
-  limit-size: 500
-  duration: 3600000
-  qualities: 360, 720
-image:
-  limit-size: 10
-office:
-  limit-size: 200
-prefix: vn
-
 users:
   sync:
     schedule:
@@ -149,12 +137,6 @@ schedule:
     customer-care:
       time : 0 0 0 * * ?
       zone : Asia/Ho_Chi_Minh
-
-app:
-  client:
-    domain: http://dev-sso.tma-swerp.com
-  gateway:
-    domain-name: http://bdu-gateway-service.com
 
 jwt:
   accessTokenExpired: 602

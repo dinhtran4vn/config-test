@@ -31,7 +31,9 @@ spring:
       properties:
         max.poll.interval.ms: 1800000 # Tùy chỉnh max.poll.interval.ms
         max.poll.records: 3 # Tùy chỉnh max.poll.records
-
+    topics:      
+      create-webp-topic: khl-dev-topic-storage-create-webp-server
+      convert-video: khl-dev-topic-storage-convert-video-server
 video:
   limit-size: 500
   duration: 3600000
@@ -41,5 +43,6 @@ image:
 office:
   limit-size: 200
 prefix: vn
+
 is-production: false
 zone: Asia/Ho_Chi_Minh

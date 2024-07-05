@@ -1,13 +1,13 @@
 server:
-  port: ${PORT:8082}
+  port: 5508
   servlet:
-    context-path: /crm-service
+    context-path: /crm
 
 spring:
   datasource:
-    url: jdbc:postgresql://192.168.121.23:5432/erp_crm
+    url: jdbc:postgresql://192.168.1.91:5432/erp
     username: postgres
-    password: 1_Abc_123@
+    password: 1234567890x@X
     driver-class-name: org.postgresql.Driver
     hikari:
       pool-name: dev-crm-pool

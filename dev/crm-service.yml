@@ -16,4 +16,4 @@ spring:
       connection-timeout: 30000 #  if a connection is not available within 30 seconds, a SQLException will be thrown
       minimum-idle: 3 # This means that HikariCP will maintain a minimum of 3 idle connections in the pool at all times
 swagger:
-  url: http://192.168.1.91:5508/crm
+  url: http://192.168.1.91:5508

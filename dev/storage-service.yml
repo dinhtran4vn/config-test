@@ -1,7 +1,7 @@
 server:
   port: 5504
   servlet:
-    context-path: /storage-service
+    context-path: /storage
   tomcat:
     max-swallow-size: 500MB
     max-http-form-post-size: 500MB

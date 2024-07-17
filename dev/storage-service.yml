@@ -34,6 +34,7 @@ spring:
     topics:      
       create-webp-topic: khl-dev-topic-storage-create-webp-server
       convert-video: khl-dev-topic-storage-convert-video-server
+      create-webm-topic: khl-dev-topic-storage-create-webm-server
 video:
   limit-size: 500
   duration: 3600000

@@ -1,7 +1,7 @@
 server:
   port: 5504
   servlet:
-    context-path: /storage-service
+    context-path: /storage
   tomcat:
     max-swallow-size: 500MB
     max-http-form-post-size: 500MB
@@ -31,7 +31,10 @@ spring:
       properties:
         max.poll.interval.ms: 1800000 # Tùy chỉnh max.poll.interval.ms
         max.poll.records: 3 # Tùy chỉnh max.poll.records
-
+    topics:      
+      create-webp-topic: khl-dev-topic-storage-create-webp-server
+      convert-video: khl-dev-topic-storage-convert-video-server
+      create-webm-topic: khl-dev-topic-storage-create-webm-server
 video:
   limit-size: 500
   duration: 3600000
@@ -41,5 +44,9 @@ image:
 office:
   limit-size: 200
 prefix: vn
+
 is-production: false
 zone: Asia/Ho_Chi_Minh
+
+swagger:
+  url: http://192.168.1.91:5504

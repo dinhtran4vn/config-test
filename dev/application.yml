@@ -71,8 +71,8 @@ spring:
                     new_generator_mappings: false
 
   kafka:
-    bootstrap-servers: 192.168.1.91:9092
-    bootstrapAddress: 192.168.1.91:9092
+    bootstrap-servers: http://192.168.1.91:9092
+    bootstrapAddress: http://192.168.1.91:9092
     listener:
       enabled: true
     producer:

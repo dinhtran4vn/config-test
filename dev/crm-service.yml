@@ -4,7 +4,7 @@ server:
     context-path: /crm
 spring:
   datasource:
-    url: jdbc:postgresql://192.168.1.91:5432/erp
+    url: jdbc:postgresql://192.168.1.91:5432/crm_dev
     username: postgres
     password: 1234567890x@X
     driver-class-name: org.postgresql.Driver

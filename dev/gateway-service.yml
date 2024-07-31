@@ -21,41 +21,19 @@ spring:
         - id: sso
           uri: lb://sso-service
           predicates:
-            - Path=/sso-service/**
+            - Path=/sso/**
         # =====================================
         - id: storage
           uri: lb://storage-service
           predicates:
-            - Path=/storage-service/**
+            - Path=/storage/**
         # =====================================
         - id: crm
           uri: lb://crm-service
           predicates:
-            - Path=/crm-service/**
+            - Path=/crm/**
         # =====================================
         - id: notification
           uri: lb://notification-service
           predicates:
-            - Path=/notification-service/**
-        # =====================================
-        - id: comment
-          uri: lb://comment-service
-          predicates:
-            - Path=/comment-service/**
-        # =====================================
-        - id: statistics
-          uri: lb://statistics-service
-          predicates:
-            - Path=/statistics-service/**
-        # =====================================
-        - id: task
-          uri: lb://task-service
-          predicates:
-            - Path=/task-service/**
-        # =====================================
-        - id: cart
-          uri: lb://cart-service
-          filters:
-            - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
-          predicates:
-            - Path=/cart-service/**
+            - Path=/notification/**

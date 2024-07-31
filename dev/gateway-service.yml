@@ -10,7 +10,7 @@ spring:
         corsConfigurations:
           '[/**]':
             allowedOrigins:
-            - '*'
+              - '*'
               # DEV
               - 'https://khaiminhland-dev.innovation.com.vn'
               - 'http://192.168.1.94'

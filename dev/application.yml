@@ -140,8 +140,12 @@ schedule:
       zone : Asia/Ho_Chi_Minh
 
 jwt:
-  accessTokenExpired: 602
-  refreshTokenExpired: 720022424
+  jwtSecret: 'sah@kk#nn#v4,^121.,!@{}psassaasa'
+  accessTokenExpired: 1440
+  refreshTokenExpired: 1450
 
 gateway:
   host: http://192.168.1.91:5501
+  
+api-gateway:
+  url: https://api-crm-khaiminhland-dev.innovation.com.vn
